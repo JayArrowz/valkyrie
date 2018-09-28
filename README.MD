@@ -26,7 +26,7 @@ Maven
 <dependency>
     <groupId>com.github.marceloaguiarr</groupId>
     <artifactId>Valkyrie</artifactId>
-    <version>v1.0.0</version>
+    <version>1.0.0</version>
 </dependency>
 ```
 
@@ -40,7 +40,7 @@ allprojects {
     }
 ```
 ```
-compile group: 'com.github.marceloaguiarr', name: 'Valkyrie', version: 'v1.0.0'
+compile group: 'com.github.marceloaguiarr', name: 'Valkyrie', version: '1.0.0'
 ```
 
 Sbt
@@ -48,7 +48,7 @@ Sbt
 resolvers += "jitpack" at "https://jitpack.io"
 ```
 ```
-libraryDependencies += "com.github.marceloaguiarr" % "Valkyrie" % "v1.0.0"
+libraryDependencies += "com.github.marceloaguiarr" % "Valkyrie" % "1.0.0"
 ```
 
 ### Adding to your application
