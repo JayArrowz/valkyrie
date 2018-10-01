@@ -77,7 +77,7 @@ public class PluginSecurityProfile implements SecurityProfile {
 }
 ```
 
-A complete list of permissions can be found [here](https://docs.oracle.com/javase/9/docs/api/java/security/Permission.html).
+A complete list of permissions can be found [here](https://docs.oracle.com/javase/8/docs/api/java/security/Permission.html).
 
 With that done now you can start Valkyrie.
 
