@@ -9,7 +9,7 @@ Welcome to Valkyrie's documentation!
 Trying to create a simple table of contents
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
 
-    readme
+   readme

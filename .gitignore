@@ -31,3 +31,6 @@ nbdist/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+### docs ###
+docs/_build
