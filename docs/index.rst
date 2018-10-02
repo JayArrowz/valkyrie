@@ -16,5 +16,5 @@ Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`readme`
+* `Readme <https://github.com/marceloaguiarr/valkyrie/blob/master/docs/readme.rst>`_
 * :ref:`search`
