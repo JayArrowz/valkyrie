@@ -1,4 +1,4 @@
 Valkyrie
 ========
 
-Teste de markdown
+This is the sample index for Readthedocs.io test.
