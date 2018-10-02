@@ -8,13 +8,6 @@ Welcome to Valkyrie's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Contents
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* `Readme <https://github.com/marceloaguiarr/valkyrie/blob/master/docs/readme.rst>`_
-* :ref:`search`
+    readme
