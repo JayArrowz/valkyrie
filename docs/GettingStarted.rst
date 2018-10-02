@@ -1,3 +1,4 @@
+.. _getting_started:
 ### Installation
 You may use any of the following package managers to use Valkyrie.
 
