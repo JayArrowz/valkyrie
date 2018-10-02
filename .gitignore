@@ -34,3 +34,5 @@ nbdist/
 
 ### docs ###
 docs/_build
+docs/Makefile
+docs/make.bat
