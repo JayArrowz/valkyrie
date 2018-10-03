@@ -51,15 +51,15 @@ msgstr ""
 
 #: ../../readme.rst:23
 msgid "Usage"
-msgstr ""
+msgstr "Utilização"
 
 #: ../../readme.rst:26
 msgid "Installation"
-msgstr ""
+msgstr "Instalação"
 
 #: ../../readme.rst:28
 msgid "You may use any of the following package managers to use Valkyrie."
-msgstr ""
+msgstr "Você pode utilizar qualquer um dos gerenciadores de pacote abaixo para instalar o Valkyrie."
 
 #: ../../readme.rst:30
 msgid "Maven"
