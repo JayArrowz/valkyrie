@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Marcelo Aguiar Rodrigues
+# This file is distributed under the same license as the Valkyrie package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Valkyrie \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-03 10:28-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../readme.rst:2
+msgid "Valkyrie Sandbox Library"
+msgstr ""
+
+#: ../../readme.rst:4
+msgid ""
+"Valkyrie is a sandbox library for applications that run plugins. It "
+"provides a more comprehensive way to setup a set of permissions for each "
+"classloader that runs a plugin inside the main application while "
+"maintaining full permissions for the application itself."
+msgstr ""
+
+#: ../../readme.rst:9
+msgid ""
+"With Valkyrie is possible to create a *SecurityProfile* that will be used"
+" for your application plugins. Each *SecurityProfile* is associated with "
+"a *ClassLoader*."
+msgstr ""
+
+#: ../../readme.rst:13
+msgid ""
+"*SecurityProfile* is a interface that must be implemented by the "
+"application to set the *PermissionCollection* for the plugins. There are "
+"two implementations in Valkyrie, one with no permissions at all and one "
+"with all permissions, where the latter is used by default as the "
+"application set of permissions."
+msgstr ""
+
+#: ../../readme.rst:19
+msgid "The *ClassLoader* can be any custom classloader that will run the plugins."
+msgstr ""
+
+#: ../../readme.rst:23
+msgid "Usage"
+msgstr ""
+
+#: ../../readme.rst:26
+msgid "Installation"
+msgstr ""
+
+#: ../../readme.rst:28
+msgid "You may use any of the following package managers to use Valkyrie."
+msgstr ""
+
+#: ../../readme.rst:30
+msgid "Maven"
+msgstr ""
+
+#: ../../readme.rst:49
+msgid "Gradle"
+msgstr ""
+
+#: ../../readme.rst:64
+msgid "Sbt"
+msgstr ""
+
+#: ../../readme.rst:75
+msgid "Adding to your application"
+msgstr ""
+
+#: ../../readme.rst:77
+msgid ""
+"Valkyrie acts as a wrapper for the SecurityManager rabbit hole to provide"
+" a simpler way to secure your application and the plugins it might run. "
+"To do that you are going to define a set o permissions that the plugins "
+"have."
+msgstr ""
+
+#: ../../readme.rst:82
+msgid ""
+"The way this works is as a whitelist of permissions, allowing them to do "
+"what is explicit described and denying anything else."
+msgstr ""
+
+#: ../../readme.rst:85
+msgid "Plugins must run in a separate classloader."
+msgstr ""
+
+#: ../../readme.rst:87
+msgid ""
+"To create a set of permissions create a class that implements the "
+"*com.github.marceloaguiarr.valkyrie.profiles.SecurityProfile* interface. "
+"This interface has only one method called *getPermissions* that returns a"
+" *java.security.PermissionCollection* object. An example is shown below."
+msgstr ""
+
+#: ../../readme.rst:110
+msgid "A complete list of permissions can be found `here`_."
+msgstr ""
+
+#: ../../readme.rst:112
+msgid "With that done now you can start Valkyrie"
+msgstr ""
+
+#: ../../readme.rst:127
+msgid "Create an instance of the *SecurityProfile* you created"
+msgstr ""
+
+#: ../../readme.rst:131
+msgid ""
+"Set the profile you created to the ClassLoader you will use to run your "
+"plugins"
+msgstr ""
+
+#: ../../readme.rst:136
+msgid "Set the *SecurityManager* for the application"
+msgstr ""
+
+#: ../../readme.rst:140
+msgid "Start Valkyrie"
+msgstr ""
+
+#: ../../readme.rst:142
+msgid ""
+"That is it. Any code executed under the ClassLoader defined in (2) will "
+"be submitted to the set of permissions given to the "
+"*PluginSecurityProfile* class. You can add multiple *SecurityProfile* "
+"distinct ClassLoaders."
+msgstr ""
+
+#: ../../readme.rst:148
+msgid "Disabling Valkyrie"
+msgstr ""
+
+#: ../../readme.rst:150
+msgid ""
+"Even though the application has a set of AllPermissions that are still "
+"some actions that the SecurityManager will not allow. This might prompt "
+"the developer to want to stop Valkyrie to execute their code. This is not"
+" advised and Valkyrie does not provide a functionality to stop itself."
+msgstr ""
+
+#: ../../readme.rst:156
+msgid ""
+"If your business logic requires that the application execute a snippet of"
+" code that is being blocked by Valkyrie there is a *doPrivileged* method."
+msgstr ""
+
+#: ../../readme.rst:160
+msgid "Usage:"
+msgstr ""
+
+#: ../../readme.rst:169
+msgid ""
+"This will run the code with elevated privileged without making your "
+"application vulnerable."
+msgstr ""
+

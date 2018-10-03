@@ -1,8 +1,0 @@
-#
-msgid "Welcome to Valkyrie's documentation!"
-msgstr ""
-
-msgid "Trying to create a simple table of contents"
-msgstr ""
-
-
