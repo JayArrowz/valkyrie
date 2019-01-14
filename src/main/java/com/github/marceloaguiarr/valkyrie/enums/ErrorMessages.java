@@ -22,8 +22,10 @@ package com.github.marceloaguiarr.valkyrie.enums;
  */
 public enum ErrorMessages {
 
-    SECURITY_MANAGER_CANT_BE_NULL("Security Manager can't be null"),
-    POLICY_CANT_BE_NULL("Policy can't be null"),;
+    SECURITY_MANAGER_CANT_BE_NULL("SecurityManager can not be null"),
+    POLICY_CANT_BE_NULL("Policy can not be null"),
+    PLUGINS_CAN_NOT_CLOSE_APPLICATION("plugins can not close the application")
+    ;
 
     private String value;
 

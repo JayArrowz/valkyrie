@@ -15,7 +15,11 @@
  */
 package com.github.marceloaguiarr.valkyrie.managers;
 
+import com.github.marceloaguiarr.valkyrie.enums.ErrorMessages;
+
 /**
+ * {@inheritDoc}
+ *
  * Extends the {@link SecurityManager} to override the getThreadGroup
  * method in order to prevent the plugins from creating new threads.
  *
@@ -42,4 +46,9 @@ public class ThreadSecurityManager extends SecurityManager {
         return rootGroup;
     }
 
+    @Override
+    public void checkExit(int status) {
+        super.checkExit(status);
+        throw new RuntimeException(ErrorMessages.PLUGINS_CAN_NOT_CLOSE_APPLICATION.get());
+    }
 }
