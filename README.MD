@@ -102,9 +102,9 @@ That is it. Any code executed under the ClassLoader defined in (2) will be submi
 
 ### Disabling Valkyrie
 
-Even though the application has a set of AllPermissions that are still some actions that the SecurityManager will not allow. This might prompt the developer to want to stop Valkyrie to execute their code. This is not advised and Valkyrie does not provide a functionality to stop itself.
+Even though the application has a set of AllPermissions there are still some actions that the SecurityManager will not allow. This might prompt the developer to want to stop Valkyrie to execute their code. This is not advised and Valkyrie does not provide a functionality to stop itself.
 
-If your business logic requires that the application execute a snippet of code that is being blocked by Valkyrie there is a _doPrivileged_ method.
+If your business logic requires that the application executes a snippet of code that is being blocked by Valkyrie, there is a _doPrivileged_ method.
 
 Usage:
 
