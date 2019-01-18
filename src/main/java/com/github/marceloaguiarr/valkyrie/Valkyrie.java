@@ -113,9 +113,12 @@ public final class Valkyrie {
         sm = securityManager;
     }
 
+    public static void setSecurityManager(SecurityManagers securityManager, Set<URL> managerApplications) {
+        setSecurityManager(securityManager.getSecurityManager(), new Sandbox(managerApplications));
+    }
+
     public static void setSecurityManager(SecurityManager securityManager, Set<URL> managerApplications) {
-        p = new Sandbox(managerApplications);
-        sm = securityManager;
+        setSecurityManager(securityManager, new Sandbox(managerApplications));
     }
 
     /**
