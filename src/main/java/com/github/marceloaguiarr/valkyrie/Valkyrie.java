@@ -19,9 +19,11 @@ import com.github.marceloaguiarr.valkyrie.enums.ErrorMessages;
 import com.github.marceloaguiarr.valkyrie.enums.SecurityManagers;
 import com.github.marceloaguiarr.valkyrie.profiles.SecurityProfile;
 
+import java.net.URL;
 import java.security.AccessController;
 import java.security.Policy;
 import java.security.PrivilegedAction;
+import java.util.Set;
 
 /**
  * Valkyrie Sandbox Library
@@ -108,6 +110,11 @@ public final class Valkyrie {
      */
     public static void setSecurityManager(SecurityManager securityManager, Policy policy) {
         p = policy;
+        sm = securityManager;
+    }
+
+    public static void setSecurityManager(SecurityManager securityManager, Set<URL> managerApplications) {
+        p = new Sandbox(managerApplications);
         sm = securityManager;
     }
 

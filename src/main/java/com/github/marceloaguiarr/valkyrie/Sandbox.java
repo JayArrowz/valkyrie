@@ -18,9 +18,11 @@ package com.github.marceloaguiarr.valkyrie;
 import com.github.marceloaguiarr.valkyrie.profiles.ApplicationSecurityProfile;
 import com.github.marceloaguiarr.valkyrie.profiles.SecurityProfile;
 
+import java.net.URL;
 import java.security.PermissionCollection;
 import java.security.Policy;
 import java.security.ProtectionDomain;
+import java.util.Set;
 
 /**
  * Custom sandbox policy.
@@ -29,8 +31,26 @@ import java.security.ProtectionDomain;
  */
 final class Sandbox extends Policy {
 
+    private Set<URL> managerApplications;
+
+    public Sandbox(Set<URL> managerApplications) {
+        this.managerApplications = managerApplications;
+    }
+
+    public Sandbox() {
+        this.managerApplications = null;
+    }
+
+
     @Override
     public PermissionCollection getPermissions(ProtectionDomain domain) {
+
+
+        if (this.managerApplications != null) {
+            if (this.managerApplications.contains(domain.getCodeSource().getLocation())) {
+                return applicationPermissions();
+            }
+        }
 
         if (isPlugin(domain)) {
 
