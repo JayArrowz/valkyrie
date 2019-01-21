@@ -19,8 +19,8 @@ import com.github.marceloaguiarr.valkyrie.enums.ErrorMessages;
 import com.github.marceloaguiarr.valkyrie.enums.SecurityManagers;
 import com.github.marceloaguiarr.valkyrie.profiles.SecurityProfile;
 
-import java.net.URL;
 import java.security.AccessController;
+import java.security.CodeSource;
 import java.security.Policy;
 import java.security.PrivilegedAction;
 import java.util.Set;
@@ -105,7 +105,7 @@ public final class Valkyrie {
     /**
      * Sets a custom {@link SecurityManager} and a custom {@link Policy}
      *
-     * @param securityManager {@link SecurityManagers}
+     * @param securityManager {@link SecurityManager}
      * @param policy          {@link Policy}
      */
     public static void setSecurityManager(SecurityManager securityManager, Policy policy) {
@@ -113,11 +113,25 @@ public final class Valkyrie {
         sm = securityManager;
     }
 
-    public static void setSecurityManager(SecurityManagers securityManager, Set<URL> managerApplications) {
+    /**
+     * Sets one of the provided {@link SecurityManagers} and set of manager applications CodeSource.
+     * These applications will have permissions to monitor your application.
+     *
+     * @param securityManager     {@link SecurityManagers}
+     * @param managerApplications Set of code sources for manager applications
+     */
+    public static void setSecurityManager(SecurityManagers securityManager, Set<CodeSource> managerApplications) {
         setSecurityManager(securityManager.getSecurityManager(), new Sandbox(managerApplications));
     }
 
-    public static void setSecurityManager(SecurityManager securityManager, Set<URL> managerApplications) {
+    /**
+     * Sets a custom {@link SecurityManager} and set of manager applications CodeSource.
+     * These applications will have permissions to monitor your application.
+     *
+     * @param securityManager     {@link SecurityManager}
+     * @param managerApplications Set of code sources for manager applications
+     */
+    public static void setSecurityManager(SecurityManager securityManager, Set<CodeSource> managerApplications) {
         setSecurityManager(securityManager, new Sandbox(managerApplications));
     }
 

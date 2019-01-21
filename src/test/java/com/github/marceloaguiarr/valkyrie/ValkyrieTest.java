@@ -62,7 +62,6 @@ public class ValkyrieTest {
         Valkyrie.start();
 
         assertNotNull(System.getSecurityManager());
-        assertTrue(System.getSecurityManager() instanceof SecurityManager);
     }
 
     @Test
