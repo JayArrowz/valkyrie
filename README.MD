@@ -1,5 +1,7 @@
 # Valkyrie Sandbox Library
 
+[![](https://jitpack.io/v/marceloaguiarr/valkyrie.svg)](https://jitpack.io/#marceloaguiarr/valkyrie)
+
 Valkyrie is a sandbox library for applications that run plugins. It provides a more comprehensive way to setup a set of permissions for each classloader that runs a plugin inside the main application while maintaining full permissions for the application itself. 
 
 With Valkyrie is possible to create a _SecurityProfile_ that will be used for your application plugins. Each _SecurityProfile_ is associated with a _ClassLoader_.
